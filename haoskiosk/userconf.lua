@@ -137,6 +137,8 @@ msg.info("USERNAME=%s; URL=%s; DARK_MODE=%s; SIDEBAR=%s; THEME=%s; LOGIN_DELAY=%
 -- -----------------------------------------------------------------------
 -- Forward console messages to stdout
 settings.set_setting("webview.enable_write_console_messages_to_stdout", true)
+pcall(settings.set_setting, "webview.enable_webgl", true)
+pcall(settings.set_setting, "webview.hardware_acceleration_policy", "always")
 
 -- Prefer Dark mode if set to true
 settings.application.prefer_dark_mode = dark_mode
